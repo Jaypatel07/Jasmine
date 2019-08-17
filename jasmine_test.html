@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Testing with Jasmine</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/jasmine.min.css">
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/jasmine.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/jasmine-html.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/boot.min.js"></script>
+        <script src="jasmine_test.js"></script>
+        <script src="jasmine_test.js"></script>
+    </head>
+    <body>
+        <script>
+                describe("array", function() { 
+                //Arrange
+                var result;
+                var expected;
+                var arr = [1,2,3,4];
+                var x = 5;
+                        //add
+                        it("should be able to add to an array", function() {
+                            //Act
+                            result = add(arr, x);
+                            //Assert
+                            expect(result).toEqual([1,2,3,4,5]);
+                        });
+                 
+                        //remove last
+                        it("should be able to remove from the end of the array", function() {
+                            //Act
+                            result = removelast([1,2,3,4]);
+                            //Assert
+                            expect(result).toEqual([1,2,3]);
+                        });
+                 
+                        //remove match
+                        it("should be able to remove the matching element", function() {
+                            //Act
+                            var result = removematch([1,2,3,4],3)
+                            //Assert
+                            expect(result).toEqual([1,2,4]);
+                        });
+                         
+                    });
+        </script>
+    </body>
+</html>
